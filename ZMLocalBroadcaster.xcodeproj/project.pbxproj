@@ -10,6 +10,10 @@
 		49A2C87E20D1BC82008BABEF /* ZMLocalBroadcaster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A2C87420D1BC82008BABEF /* ZMLocalBroadcaster.framework */; };
 		49A2C88320D1BC82008BABEF /* ZMLocalBroadcasterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A2C88220D1BC82008BABEF /* ZMLocalBroadcasterTests.swift */; };
 		49A2C88520D1BC83008BABEF /* ZMLocalBroadcaster.h in Headers */ = {isa = PBXBuildFile; fileRef = 49A2C87720D1BC82008BABEF /* ZMLocalBroadcaster.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49A2C89020D1BCC0008BABEF /* ZMLocalBroadcastType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A2C88E20D1BCC0008BABEF /* ZMLocalBroadcastType.swift */; };
+		49A2C89120D1BCC0008BABEF /* ZMLocalBroadcastObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A2C88F20D1BCC0008BABEF /* ZMLocalBroadcastObserver.swift */; };
+		49A2C89320D1BDC3008BABEF /* ZMLocalBroadcastSampleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A2C89220D1BDC3008BABEF /* ZMLocalBroadcastSampleVC.swift */; };
+		49A2C89520D1BEC1008BABEF /* ZMLocalBroadcastSampleTriggerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A2C89420D1BEC1008BABEF /* ZMLocalBroadcastSampleTriggerVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +33,10 @@
 		49A2C87D20D1BC82008BABEF /* ZMLocalBroadcasterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZMLocalBroadcasterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49A2C88220D1BC82008BABEF /* ZMLocalBroadcasterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZMLocalBroadcasterTests.swift; sourceTree = "<group>"; };
 		49A2C88420D1BC83008BABEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49A2C88E20D1BCC0008BABEF /* ZMLocalBroadcastType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZMLocalBroadcastType.swift; sourceTree = "<group>"; };
+		49A2C88F20D1BCC0008BABEF /* ZMLocalBroadcastObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZMLocalBroadcastObserver.swift; sourceTree = "<group>"; };
+		49A2C89220D1BDC3008BABEF /* ZMLocalBroadcastSampleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZMLocalBroadcastSampleVC.swift; sourceTree = "<group>"; };
+		49A2C89420D1BEC1008BABEF /* ZMLocalBroadcastSampleTriggerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZMLocalBroadcastSampleTriggerVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +79,10 @@
 		49A2C87620D1BC82008BABEF /* ZMLocalBroadcaster */ = {
 			isa = PBXGroup;
 			children = (
+				49A2C89420D1BEC1008BABEF /* ZMLocalBroadcastSampleTriggerVC.swift */,
+				49A2C89220D1BDC3008BABEF /* ZMLocalBroadcastSampleVC.swift */,
+				49A2C88F20D1BCC0008BABEF /* ZMLocalBroadcastObserver.swift */,
+				49A2C88E20D1BCC0008BABEF /* ZMLocalBroadcastType.swift */,
 				49A2C87720D1BC82008BABEF /* ZMLocalBroadcaster.h */,
 				49A2C87820D1BC82008BABEF /* Info.plist */,
 			);
@@ -148,6 +160,7 @@
 				TargetAttributes = {
 					49A2C87320D1BC82008BABEF = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 0940;
 					};
 					49A2C87C20D1BC82008BABEF = {
 						CreatedOnToolsVersion = 9.4;
@@ -194,6 +207,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49A2C89520D1BEC1008BABEF /* ZMLocalBroadcastSampleTriggerVC.swift in Sources */,
+				49A2C89320D1BDC3008BABEF /* ZMLocalBroadcastSampleVC.swift in Sources */,
+				49A2C89120D1BCC0008BABEF /* ZMLocalBroadcastObserver.swift in Sources */,
+				49A2C89020D1BCC0008BABEF /* ZMLocalBroadcastType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +356,7 @@
 		49A2C88920D1BC83008BABEF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -356,6 +374,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.zamekan.ZMLocalBroadcaster;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +383,7 @@
 		49A2C88A20D1BC83008BABEF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -389,6 +409,7 @@
 		49A2C88C20D1BC83008BABEF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M5G4V3E2PX;
 				INFOPLIST_FILE = ZMLocalBroadcasterTests/Info.plist;
@@ -407,6 +428,7 @@
 		49A2C88D20D1BC83008BABEF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M5G4V3E2PX;
 				INFOPLIST_FILE = ZMLocalBroadcasterTests/Info.plist;
